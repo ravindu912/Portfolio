@@ -19,6 +19,7 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+
 }
 
 body {
@@ -112,6 +113,7 @@ span {
     0% {
         transform: translateY(0)
     }
+
     50% {
         transform: translateY(-2.4rem)
     }
@@ -124,6 +126,7 @@ span {
 .home-content p {
     font-size: 1.6rem;
 }
+
 
 .social-media a {
     display: inline-flex;
@@ -181,6 +184,7 @@ span {
 .heading {
     text-align: center;
     font-size: 5rem;
+
 }
 
 .about-content h2 {
@@ -196,6 +200,7 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
 
 .services h2 {
     margin-bottom: 5rem;
@@ -220,6 +225,7 @@ span {
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+
 }
 
 .services-container .services-box:hover {
@@ -240,6 +246,7 @@ span {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
+
 
 .portfolio {
     background: var(--second-bg-color);
