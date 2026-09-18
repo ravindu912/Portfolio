@@ -3,21 +3,26 @@ name: Generate Snake
 on:
   schedule:
     - cron: "0 0 * * *"  # Runs every 24 hours
-  workflow_dispatch:      # Allows manual trigger anytime
+  workflow_dispatch:      # Manual trigger
+
+permissions:
+  contents: write         # Fixes exit code 128 (grants Git push access)
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
       - name: Push Snake SVG to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
